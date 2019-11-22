@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1574388975606.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6FD1DDC3",
+    "lastKnownWriteTime" : 1574389859,
+    "last_content_update" : 1574390091121,
+    "path" : "~/Documents/projects/blogdown-workflow/blogdown-workflow.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "72,139",
+        "scrollLine" : "65"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
