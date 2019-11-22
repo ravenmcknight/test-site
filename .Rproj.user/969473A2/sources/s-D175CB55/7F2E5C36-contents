@@ -2,30 +2,26 @@
 title: "My Blogdown Workflow!"
 author: "Raven McKnight"
 date: "11/21/2019"
-output: 
-  html_document: 
-    toc: true
-    toc_float: true
-    theme: paper
-    code_folding: hide
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, fig.width = 1)
 ```
 
 # Intro
 
-Blogdown is an R package which allows us to build whole websites in R(!!!!). 
+Blogdown is an R package which allows us to build whole websites in R. Lot's of academics and data scientists/statisticians use blogdown for their professional sites so it's a great option!
+
 When I was learning blogdown, a lot of tutorials missed the mark for me. They tended to either gloss over key points or include too much detail to be immediately helpful. This is *my* blogdown workflow. I'm not sure if it's "best practices" but it works well for me!
 
 # Choosing a theme
 
 You could argue that you shouldn't worry about the appearance of your site right off the bat but with blogdown, it does change your file structure a little depending on the theme you choose. I would start by browsing the themes [here](https://themes.gohugo.io/) and choosing one you like. 
 
-There are a few themes that are widely used, like Hugo Academic or Creative Portfolio. Choosing one of these means your site will be less unique, but it also means that more people are working with it so you'll be more likely to find answers if you need to Google questions down the line! I would recommend googling themes you're thinking about before you get too involved to see if a) thereare many questions/answers already online and b) if the Github page for the theme is still being actively updated by the creator. 
+There are a few themes that are widely used, like Hugo Academic or Creative Portfolio. Choosing one of these means your site will be less unique, but it also means that more people are working with it so you'll be more likely to find answers if you need to Google questions down the line! I would recommend googling themes you're thinking about before you get too involved to see if a) there are many questions/answers already online and b) if the Github page for the theme is still being actively updated by the creator. 
 
-For reference, [my site](ravenmcknight.com) uses Hugo Academic and [Katie Jolly's home page](katiejolly.io) uses the Creative Portfolio theme. 
+For reference, [my site](https://www.ravenmcknight.com) uses Hugo Academic and [Katie Jolly's home page](https://www.katiejolly.io) uses the Creative Portfolio theme. 
 
 Once you have a theme you like, find the Github page for that theme (usually linked somewhere pretty obvious). You'll need the URL of the repository for the theme to install the theme later. For example, if I want to use the Hugo Lithium theme by yihui [here](https://github.com/yihui/hugo-lithium), I'll need "yihui/hugo-lithium" in the next step. 
 
@@ -36,13 +32,11 @@ Setting your blogdown up locally is super easy! Here's what I did:
 
 1. Install blogdown with `install.packages("blogdown")`
 
-2. Install hugo (this is to work with themes and publishing). I installed from the terminal using Homebrew with `brew install hugo`. There's more documentation about installation [here](https://gohugo.io/getting-started/installing/).
+2. Install hugo (this is to work with themes and publishing). I installed from the terminal using Homebrew with `brew install hugo`. There's more documentation about installation [here](https://gohugo.io/getting-started/installing/). You might not really interact with this unless you use the Academic theme but I'll include it here. 
 
 3. Create a new folder for websites (mine is just at Documents/sites)
 
-3. In RStudio, navigate to your new "sites" folder. In the menu, select File -> New Project -> New Directory -> Website using blogdown If this option doesn't show up, you might need to restart R after installing blogdown. 
-
-![](/post/blogdown-workflow_files/newproject.png)
+3. In RStudio, navigate to your new "sites" folder. In the menu, select File -> New Project -> New Directory -> Website using blogdown. If this option doesn't show up, you might need to restart R after installing blogdown. ![](/post/blogdown-workflow_files/newproject.png)
 
 4. Once you select "Website using blogdown", you'll see this screen:  ![](/post/blogdown-workflow_files/fields.png)
 
@@ -55,7 +49,8 @@ To check out the site, you can use Addins -> Serve Site in RStudio ![](/post/blo
 You can also preview your site from the terminal with hugo. In the terminal, navigate to the folder your site is in (for me, `cd Documents/sites/test-site`). Then, run `hugo server`. A bunch of code will flash by and then it should look like this: ![](/post/blogdown-workflow_files/hugo.png)
 
 
-If this works, you can type "//localhost:1313/" into your browser URL and see a preview of your site: ![](/post/blogdown-workflow_files/preview.png)
+If this works, you can type "//localhost:1313/" into your browser URL and see a preview of your site: 
+<img src = "/post/blogdown-workflow_files/preview.png" width = "900">
 
 
 Just make sure to follow the instructions and press Ctrl+C when you're done previewing!
@@ -66,23 +61,25 @@ This is the part that's hard to tutorial-ize because it can be so different depe
 
 # Publish!
 
-Once you're happy with your local preview, we can publish the site pretty easily. You can publish using Github Pages fairly easily, but I use Netlify. More computer sciency people have told me it's better but I can't pretend I know why :-) This part is a little more complicated but if you're comfortable with Github it's not crazy. I'll try to outline each step here!
+Once you're happy with your local preview, we can publish the site pretty easily. You can publish using Github Pages, but I use Netlify so that's what I'll describe here. This part is a little more complicated but if you're comfortable with Github it's not crazy. I'll try to outline each step here!
 
-1. Build the site. Once you're happy with the preview, either use the "Serve Site" addin 1 last time, or run "hugo" (not "hugo server") in the terminal. This generates the files we need to actually publish the site. 
+1. Build the site. If you're using the Academic theme, run `hugo` (not `hugo server`) in the terminal. If you're using another theme, you will probably need to use the "Serve Site" addin 1 more time. This generates the files we need to actually publish the site.
 
 2. Push these files to a Github repo! I'll assume you know how to do to this part but there are plenty of tutorials/I can help if you need! 
 
 3. Now, we go to [Netlify](https://www.netlify.com/). Create an account and then from the home screen you should be able to click "New site from Git": 
 
-![](/post/blogdown-workflow_files/newsite.png)
+<img src = "/post/blogdown-workflow_files/newsite.png" width = "900">
 
 This will walk you through connecting Netlify with Github and selecting a repo to host your site from (in my case, "test-site"). Then, you'll get this screen: 
 
-![](/post/blogdown-workflow_files/deployedscreen.png)
+<img src = "/post/blogdown-workflow_files/deployscreen.png" width = "900">
 
 These presets have always worked for me! Click Deploy Site. If all goes well, this will load for a while and then you'll see this screen: 
 
-![](/post/blogdown-workflow_files/deployedscreen.png)
+<img src="/post/blogdown-workflow_files/deployedscreen.png" width="900">
+
+
 
 Netlify will have given your site a crazy temporary url, but if you click on it, you'll get to your freshly published site! Here's mine: [https://jolly-easley-1e5485.netlify.com/](https://jolly-easley-1e5485.netlify.com/). You can do things like update your URL or buy a custom domain through Netlify!
 
@@ -90,15 +87,19 @@ Netlify will have given your site a crazy temporary url, but if you click on it,
 
 The process you just went through set your site up for continuous deployment through Github. This means that it's super easy to update your site as you add more posts/projects!
 
-Whenever I'm adding a new post, I use the Addin "serve site" to preview each change I make until I'm happy and want to make the change public. Once I'm ready to publish, I run `hugo` from the terminal to build my files. Then (from the same folder), `git add .` and push to your repo. This will start the process of re-deploying your site. You can monitor the deployment from Netlify but usually within a few seconds, you'll be able to see the updated version of your site at it's regular URL!
+Whenever I'm adding a new post, I use `hugo server` to preview each change I make until I'm happy and want to make the change public. Once I'm ready to publish, I run `hugo` from the terminal to build my files (if you're not using the Academic theme, use "Serve Site"). Then I use `git add .` to add all the newly updated files and push to my site repo. This will start the process of re-deploying your site. You can monitor the deployment from Netlify but usually within a few seconds, you'll be able to see the updated version of your site at it's regular URL! 
 
 
 # Quick example
 
-Here's a quick example for adding content! Let's say I wanted to add this tutorial to the blog "test-site" I just created. All I have to do is at the .Rmd with the content to the "post" folder and the corresponding images to the "static/img" folder: 
+Here's a quick example for adding content! Let's say I wanted to add this tutorial to the blog "test-site" I just created. All I have to do is add the .Rmd with the content to the "post" folder and the corresponding images to the "static/img" folder: 
 
 ![](/post/blogdown-workflow_files/files.png)
 
-As a sidenote, working with images can be kind of tricky. I would recommend using Addins -> Insert Image to make sure you get the pictures. 
+As a sidenote, working with images can be kind of tricky. I would recommend using Addins -> Insert Image to make sure the pictures render properly online. 
 
-Now that my files are in place, I use Addin -> Serve Site. That looks good, so I 
+Now that my files are in place, I use Addin -> Serve Site. That looks good, so I push all the changed files to Github. In this case, it took about 10 second for the new post (the one you're reading!) to show up online. All in all, it took less than 20 minutes to get a whole new site up and running online. 
+
+This is a super basic tutorial, I'll probably work on writing it up more thoroughly soon :-)
+
+

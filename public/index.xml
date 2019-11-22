@@ -56,8 +56,8 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/1/01/01/my-blogdown-workflow/</guid>
-      <description>Intro Blogdown is an R package which allows us to build whole websites in R(!!!!). When I was learning blogdown, a lot of tutorials missed the mark for me. They tended to either gloss over key points or include too much detail to be immediately helpful. This is my blogdown workflow. I’m not sure if it’s “best practices” but it works well for me!
- Choosing a theme You could argue that you shouldn’t worry about the appearance of your site right off the bat but with blogdown, it does change your file structure a little depending on the theme you choose.</description>
+      <description>Intro Blogdown is an R package which allows us to build whole websites in R. Lot’s of academics and data scientists/statisticians use blogdown for their professional sites so it’s a great option!
+When I was learning blogdown, a lot of tutorials missed the mark for me. They tended to either gloss over key points or include too much detail to be immediately helpful. This is my blogdown workflow. I’m not sure if it’s “best practices” but it works well for me!</description>
     </item>
     
   </channel>
