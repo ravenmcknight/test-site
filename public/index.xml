@@ -50,5 +50,15 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
+    <item>
+      <title>My Blogdown Workflow!</title>
+      <link>/1/01/01/my-blogdown-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/my-blogdown-workflow/</guid>
+      <description>Intro Blogdown is an R package which allows us to build whole websites in R(!!!!). When I was learning blogdown, a lot of tutorials missed the mark for me. They tended to either gloss over key points or include too much detail to be immediately helpful. This is my blogdown workflow. I’m not sure if it’s “best practices” but it works well for me!
+ Choosing a theme You could argue that you shouldn’t worry about the appearance of your site right off the bat but with blogdown, it does change your file structure a little depending on the theme you choose.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -42,20 +42,20 @@ Setting your blogdown up locally is super easy! Here's what I did:
 
 3. In RStudio, navigate to your new "sites" folder. In the menu, select File -> New Project -> New Directory -> Website using blogdown If this option doesn't show up, you might need to restart R after installing blogdown. 
 
-![](newproject.png)
+![](/post/blogdown-workflow_files/newproject.png)
 
-4. Once you select "Website using blogdown", you'll see this screen: ![](fields.png) 
+4. Once you select "Website using blogdown", you'll see this screen:  ![](/post/blogdown-workflow_files/fields.png)
 
 Here, set the directory name to the name of your website and the highlighted field to the Github repo for the theme you'd like to use. Once you're happy with that, click "Create Project." This will create a new folder containing all of the code for your new site!
 
 This is all you need to do to get a basic site working locally. 
 
-To check out the site, you can use Addins -> Serve Site in RStudio ![](addins.png) This will create a local preview of the site in your Rstudio viewer panel. This will likely be a super simple version of the site with a few stock images and Lorem Ipsum example posts. 
+To check out the site, you can use Addins -> Serve Site in RStudio ![](/post/blogdown-workflow_files/addins.png) This will create a local preview of the site in your Rstudio viewer panel. This will likely be a super simple version of the site with a few stock images and Lorem Ipsum example posts. 
 
-You can also preview your site from the terminal with hugo. In the terminal, navigate to the folder your site is in (for me, `cd Documents/sites/test-site`). Then, run `hugo server`. A bunch of code will flash by and then it should look like this: ![](hugo.png) 
+You can also preview your site from the terminal with hugo. In the terminal, navigate to the folder your site is in (for me, `cd Documents/sites/test-site`). Then, run `hugo server`. A bunch of code will flash by and then it should look like this: ![](/post/blogdown-workflow_files/hugo.png)
 
 
-If this works, you can type "//localhost:1313/" into your browser URL and see a preview of your site: ![](preview.png)
+If this works, you can type "//localhost:1313/" into your browser URL and see a preview of your site: ![](/post/blogdown-workflow_files/preview.png)
 
 
 Just make sure to follow the instructions and press Ctrl+C when you're done previewing!
@@ -74,15 +74,15 @@ Once you're happy with your local preview, we can publish the site pretty easily
 
 3. Now, we go to [Netlify](https://www.netlify.com/). Create an account and then from the home screen you should be able to click "New site from Git": 
 
-![](newsite.png)
+![](/post/blogdown-workflow_files/newsite.png)
 
 This will walk you through connecting Netlify with Github and selecting a repo to host your site from (in my case, "test-site"). Then, you'll get this screen: 
 
-![](deployscreen.png)
+![](/post/blogdown-workflow_files/deployedscreen.png)
 
 These presets have always worked for me! Click Deploy Site. If all goes well, this will load for a while and then you'll see this screen: 
 
-![](deployedscreen.png)
+![](/post/blogdown-workflow_files/deployedscreen.png)
 
 Netlify will have given your site a crazy temporary url, but if you click on it, you'll get to your freshly published site! Here's mine: [https://jolly-easley-1e5485.netlify.com/](https://jolly-easley-1e5485.netlify.com/). You can do things like update your URL or buy a custom domain through Netlify!
 
@@ -90,9 +90,15 @@ Netlify will have given your site a crazy temporary url, but if you click on it,
 
 The process you just went through set your site up for continuous deployment through Github. This means that it's super easy to update your site as you add more posts/projects!
 
-Whenever I'm adding a new post, `hugo server` to preview each change I make until I'm happy and want to make the change public. Once I'm ready to publish, I run `hugo` from the terminal to build my files. Then (from the same folder), `git add .` and push to your repo. This will start the process of re-deploying your site. You can monitor the deployment from Netlify but usually within a few seconds, you'll be able to see the updated version of your site at it's regular URL!
+Whenever I'm adding a new post, I use the Addin "serve site" to preview each change I make until I'm happy and want to make the change public. Once I'm ready to publish, I run `hugo` from the terminal to build my files. Then (from the same folder), `git add .` and push to your repo. This will start the process of re-deploying your site. You can monitor the deployment from Netlify but usually within a few seconds, you'll be able to see the updated version of your site at it's regular URL!
 
 
 # Quick example
 
-Here's a quick example for adding content! Let's say I wanted to add this tutorial to the blog "test-site" I just created. 
+Here's a quick example for adding content! Let's say I wanted to add this tutorial to the blog "test-site" I just created. All I have to do is at the .Rmd with the content to the "post" folder and the corresponding images to the "static/img" folder: 
+
+![](/post/blogdown-workflow_files/files.png)
+
+As a sidenote, working with images can be kind of tricky. I would recommend using Addins -> Insert Image to make sure you get the pictures. 
+
+
